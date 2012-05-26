@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="messageProvider" class="book.prospring.chapter02.HelloWorldMessageProvider"></bean>
+	<bean id="messageRenderer" class="book.prospring.chapter02.StandardOutputMessageRenderer">
+		<property name="messageProvider" ref="messageProvider"/>
+	</bean>
+
+</beans>
